@@ -2,7 +2,6 @@ import { Stack } from "expo-router";
 import { Provider as PaperProvider } from 'react-native-paper';
 import { TaskProvider } from "@/contexts/TaskContext";
 import { FilterProvider } from "@/contexts/FilterContext";
-import { LayoutAnimation } from 'react-native';
 import { SortProvider } from "@/contexts/SortContext";
 import 'react-native-get-random-values';
 

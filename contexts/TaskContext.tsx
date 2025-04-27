@@ -38,7 +38,7 @@ export const TaskProvider = ({ children }: { children: ReactNode }) => {
   }, []);
 
   useEffect(() => {
-    if (loading) return; // Don't save until initial loading is done
+    if (loading) return;
     const saveTasks = async () => {
       try {
         await AsyncStorage.setItem('tasks', JSON.stringify(tasks));
@@ -67,6 +67,7 @@ export const TaskProvider = ({ children }: { children: ReactNode }) => {
   };
 
   const updateTask = (id: string, updatedFields: { title?: string; description?: string; dueDate?: Date }) => {
+    LayoutAnimation.configureNext(LayoutAnimation.Presets.easeInEaseOut);
     setTasks(prev =>
       prev.map(task =>
         task.id === id ? { ...task, ...updatedFields } : task
