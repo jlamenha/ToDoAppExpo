@@ -106,6 +106,7 @@ export default function RootLayout() {
           }} />
     <Tabs.Screen name="statistics" 
       options={{ 
+        headerShown:false,
         title: "Statistics" ,
         tabBarIcon: ({ color, focused }) => (
           <Ionicons name={focused ? 'analytics-sharp' : 'analytics-outline'} color={color} size={24} />
